@@ -1,2 +1,2 @@
 # alienbug.games
-Video games web site
+Web site for [Alien Bug Games](https://alienbug.games/)

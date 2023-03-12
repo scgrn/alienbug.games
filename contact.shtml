@@ -1,0 +1,47 @@
+<!--#include file="./header.html" -->
+
+    <!-- content -->
+    <div class="container my-5" style="max-width: 960px;">
+        <div class="row about mt-3 px-3">
+            <div class="col-md-6 order-md-last pb-5 justify-content-center text-center">
+                <div class="d-flex align-items-center">
+                    <!-- <a href="https://en.wikipedia.org/wiki/Witzelsucht"> -->
+                    <img src="./img/photo.jpg" class="photo img-fluid align-middle" alt="..."/>
+                    <!-- </a> -->
+                </div>
+            </div>
+
+            <div class="col-md-6 order-sm-1">
+                <h3>About</h3>
+                <p>
+                    My name is Andrew Krause and I am a human,
+                    Philadelphia-based computer programmer. I make video games for Earthlings and others.
+                </p><p>
+                    I call my stuff Alien Bug, named after those weird things we found in Jason’s basement.
+                </p>
+                <p>
+                    Go play!
+                </p>
+                <br/>
+                
+                <h3>Contact</h3>
+                <form id="contactForm" class="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" class="form-control" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="email" type="email" class="form-control" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="8" placeholder="Message"></textarea>
+                    </div>
+                    <div id="status" class="m-2">&nbsp;</div>
+                    <div style="margin-left: 10px;">
+                        [<a href="javascript:void(0)" onClick="javascript:sendMail()">Submit for analysis</a>]
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!--#include file="./footer.html" -->

@@ -1,0 +1,345 @@
+:root {
+    --color-bg: #eeeeee;
+    --color-fg: #101112;
+
+    --color-bg: rgb(238, 238, 238);
+    --color-fg: rgb(0, 64, 92);
+}
+
+.dark-mode {
+    --color-bg: #101112;
+    --color-fg: #eeeeee;
+
+    --color-bg: rgb(0, 16, 32);
+    --color-fg: rgb(192, 255, 255);
+}
+
+/*
+@include media-breakpoint-up(sm) {
+    html {
+        font-size: 1.2rem;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    html {
+        font-size: 1.4rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    html {
+        font-size: 1.6rem;
+    }
+}
+*/
+
+/* raleway-regular - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/raleway-v13-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Raleway'), local('Raleway-Regular'),
+       url('./fonts/raleway-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/raleway-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/raleway-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/raleway-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/raleway-v13-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Ocra';
+    src : url('./fonts/ocra10.eot');
+    src : local('Ocra Regular'),
+        local(Ocra),
+        url('./fonts/ocra10.ttf') format('opentype'),
+        url('./fonts/ocra.svg#font') format('svg');
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+
+    font-size: 1.2em;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    overflow-x: hidden;
+}
+
+.header {
+    font-family: 'Ocra';
+}
+
+#logo {
+    fill: var(--color-fg);
+    max-width: 75%;
+}
+
+.navbar-custom {
+    background: var(--color-bg);
+}
+
+.navbar-custom .navbar-text {
+    color: var(--color-fg);
+    transition: all 0.0s !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: var(--color-fg);
+    border-radius: 0px;
+    padding: 3px 6px;
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.dark-mode .navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-custom .navbar-nav > a:hover, .navbar-custom .navbar-nav > a:focus {
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+}
+
+.nav-link {
+    margin-left:30px;
+    margin-right:30px;
+}
+
+.navbar-collapse {
+    border-color: var(--color-fg) !important;
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+a:not(.nav-link,.dropdown-item) {
+    padding: 10px;
+    margin: -10px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: var(--color-fg) !important;
+}
+
+a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
+    background-color: var(--color-fg) !important;
+    color: var(--color-bg) !important;
+    transition: all 0.25s !important;
+}
+
+.nav-link {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+}
+
+/* https://www.geeksforgeeks.org/how-to-change-the-height-of-br-tag/ */
+.brsmall {
+    display: block;
+    margin-bottom: -0.75em;
+}
+
+.game-card {
+    border: 1px solid;
+    border-color: var(--color-fg) !important;
+}
+
+.game-card img {
+    border: 1px solid;
+    border-color: var(--color-fg) !important;
+}
+
+.game-card p {
+    border-color: var(--color-fg) !important;
+}
+
+.game-card h4 {
+    border-color: var(--color-fg) !important;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    color: var(--color-fg) !important;
+    background-color: var(--color-bg) !important;
+    border-color: var(--color-fg) !important;
+    border-radius: 15px !important;
+    transition: all 0.0s !important;
+}
+
+.dropdown-menu {
+    color: var(--color-fg) !important;
+    background-color: var(--color-bg) !important;
+    border-color: var(--color-fg) !important;
+    border-radius: 15px !important;
+    transition: all 0.0s !important;
+    z-index: 2000;
+    text-align: center;
+}
+
+.btn {
+    border-radius: 15px !important;
+    min-width: 160px;
+    text-align: center;
+}
+
+.dropdown-item {
+    border-radius: 0 !important;
+}
+
+.dropdown-toggle::after {
+    margin-top: 0.5vw; float:right;
+}
+
+
+.form-control {
+    border-radius: unset;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.error {
+    font-weight: bold;
+    color: var(--main-error-color);
+}
+
+/* ----------- lightbox stuff ------------ */
+
+/* https://stackoverflow.com/questions/32168234/change-the-bootstrap-modal-effect */
+.modal.fade .modal-dialog {
+    transform: scale(0.1);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/* Crop images in lightbox. */
+
+.thumbnail {
+    cursor: pointer;
+}
+
+.carousel-item img {
+    height: 60vw;
+    object-fit: cover;
+}
+
+@media (min-width: 576px) {
+    .carousel-item img {
+        width: 100%;
+        height: 80vh;
+    }
+}
+.carousel-inner > .carousel-item > img {
+    width: 800px;
+    height: 480px;
+}
+
+.lightbox .modal-content {
+    background: none;
+    border: none;
+}
+
+.lightbox .modal-header {
+    border: none;
+}	
+
+.lightbox .modal-body {
+    padding: 0;
+    border: 2px solid;
+    border-color: var(--color-fg);
+    border-radius: 0;
+    position: relative;
+}
+
+.lightbox .modal-footer {
+    border: none;
+}
+
+.lightbox .modal-footer .btn {
+    margin: auto;
+    border: solid 2px var(--color-fg);
+    background: var(--color-bg);
+    color: var(--color-fg);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    padding: 0.2em 0.7em;
+    border-radius: 0;
+}
+
+.lightbox .modal-footer .btn:hover {
+    background: var(--color-fg);
+    color: var(--color-bg);
+}
+
+@media (min-width: 768px) {
+    .lightbox .carousel-control-prev {
+        left: -110px;
+    }
+}
+
+@media (min-width: 768px) {
+    .lightbox .carousel-control-next {
+        right: -110px;
+    }
+}
+
+/* https://stackoverflow.com/questions/46249541/change-arrow-colors-in-bootstraps-carousel */
+.carousel-control-prev-icon {
+/*    
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 50 200'%3E%3Cpolygon points='50 0, 0 100, 50 200'/%3E%3C/svg%3E"); 
+    transform: scale(4.0);
+*/
+    background-image: <svg xmlns='http://www.w3.org/2000/svg'><use xlink:href="#left-arrow"/></svg>;
+}
+.carousel-control-next-icon { 
+/*
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 50 200'%3E%3Cpolygon points='0 0, 50 100, 0 200'/%3E%3C/svg%3E");
+    transform: scale(4.0);
+*/
+    background-image: <svg xmlns='http://www.w3.org/2000/svg'><use xlink:href="#right-arrow"/></svg>;
+}
+
+.photo {
+    border: 2px solid;
+}
+
+/*  weird stuff */
+*:not(.game-title,.game-links) {
+    border-radius: 50px;
+}
+
+/*  --------------- style contact form ---------------- */
+textarea {
+    border-radius: 25px !important;
+}
+ 
+.form-control::-webkit-input-placeholder {
+    color: var(--color-bg) !important;
+}
+
+input, textarea {
+    color-scheme: dark;
+    color: var(--color-bg) !important;
+    background-color: var(--color-fg) !important;
+    border: none !important;
+}
+
