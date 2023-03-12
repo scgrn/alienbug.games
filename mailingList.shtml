@@ -10,6 +10,10 @@
                     <div class="form-group">
                         <input type="text" id="email" type="email" class="form-control" name="email" placeholder="Email">
                     </div>
+                    <br/>
+                    <div style="margin-left: 10px;">
+                        [<a href="javascript:void(0)" onClick="javascript:()">Sign up</a>]
+                    </div>
                 </form>
             </div>
         </div>
