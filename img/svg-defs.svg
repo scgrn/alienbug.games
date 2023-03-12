@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    
+    <symbol viewBox="0 0 50 200" width="50" height="200" id="shape-left-arrow">
+        <polygon points='50 0, 0 100, 50 200'/>
+    </symbol>
+
+    <symbol viewBox="0 0 50 200" width="50" height="200" id="shape-right-arrow">
+        <polygon points='0 0, 50 100, 0 200'/>
+    </symbol>
+
+    <!-- define view locations for each icon -->
+    <view id="shape-left-arrow-view" viewBox="0 0 50 200" />
+    <view id="shape-right-arrow-view" viewBox="0 200 50 400" />
+
+    <use xlink:href="#shape-left-arrow" width="50" height="200" x="0" y="0" id="left-arrow"></use>
+    <use xlink:href="#shape-right-arrow" width="50" height="200" x="0" y="200" id="right-arrow"></use>
+</svg>

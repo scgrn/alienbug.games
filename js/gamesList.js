@@ -67,10 +67,8 @@ function generateLightbox(container, index) {
             <div class="modal-content">
                 <div class="modal-body">
                     <div id="${carouselName}" class="carousel slide" data-bs-ride="carousel">
-                        <div class="container-flex">
-                            <div class="carousel-inner">
-                                ${screenshotsMarkup}
-                            </div>
+                        <div class="carousel-inner">
+                            ${screenshotsMarkup}
                         </div>
 
                         <a class="carousel-control-prev lightbox" href="#${carouselName}" role="button" data-bs-slide="prev">
@@ -78,7 +76,7 @@ function generateLightbox(container, index) {
                             <span class="visually-hidden">Previous</span>
                         </a>
                         <a class="carousel-control-next lightbox" href="#${carouselName}" role="button" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-next-icon" id="arrow-right" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </a>
                     

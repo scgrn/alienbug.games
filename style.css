@@ -247,8 +247,10 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
     }
 }
 .carousel-inner > .carousel-item > img {
+/*
     width: 800px;
     height: 480px;
+*/
 }
 
 .lightbox .modal-content {
@@ -264,7 +266,7 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
     padding: 0;
     border: 2px solid;
     border-color: var(--color-fg);
-    border-radius: 0;
+    border-radius: 50px;
     position: relative;
 }
 
@@ -307,23 +309,36 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
 /*    
     background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 50 200'%3E%3Cpolygon points='50 0, 0 100, 50 200'/%3E%3C/svg%3E"); 
     transform: scale(4.0);
-*/
+
     background-image: <svg xmlns='http://www.w3.org/2000/svg'><use xlink:href="#left-arrow"/></svg>;
+*/
+/*
+    background: url("./img/svg-defs.svg#shape-left-arrow-view") no-repeat;
+*/
+    width: 50px;
+    height: 200px;
 }
+
 .carousel-control-next-icon { 
 /*
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 50 200'%3E%3Cpolygon points='0 0, 50 100, 0 200'/%3E%3C/svg%3E");
     transform: scale(4.0);
-*/
+
     background-image: <svg xmlns='http://www.w3.org/2000/svg'><use xlink:href="#right-arrow"/></svg>;
+*/
+/*
+    background: url("./img/svg-defs.svg#shape-right-arrow-view") no-repeat;
+*/
+    width: 50px;
+    height: 200px;
 }
 
 .photo {
     border: 2px solid;
 }
 
-/*  weird stuff */
-*:not(.game-title,.game-links) {
+/*  put a gratuitous border radius on dang near everything */
+*:not(.game-title,.game-links,.fade,.carousel-control-prev-icon,.carousel-control-next-icon ) {
     border-radius: 50px;
 }
 

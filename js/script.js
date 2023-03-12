@@ -55,8 +55,9 @@ function colorSVG(state, id) {
 function toggleDarkMode(state) {
     document.documentElement.classList.toggle("dark-mode", state);
     colorSVG(state, "logo");
-    colorSVG(state, "left-arrow");
-    colorSVG(state, "right-arrow");
+    colorSVG(state, "shape-left-arrow");
+    colorSVG(state, "shape-right-arrow");
+    colorSVG(state, "arrow-right");
     darkModeState = state;
 }
 
