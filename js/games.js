@@ -85,7 +85,7 @@ export default [
   {
     "title": "Peterman's Peaknuckle",
     "thumbnail": "./img/Peterman/Peterman.png",
-    "screenshots": "",
+    "screenshots": "./img/Peterman/screenshot1.png,./img/Peterman/screenshot2.png,./img/Peterman/screenshot3.png,./img/Peterman/screenshot4.png",
     "platforms": "Windows",
     "description": "A faithful port of the 1995 Turbo Pascal classic" +
         "<span class='brsmall'></span><br/>" + 
