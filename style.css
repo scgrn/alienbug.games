@@ -358,3 +358,28 @@ input, textarea {
     border: none !important;
 }
 
+
+
+
+
+/*
+https://stackoverflow.com/questions/72803938/how-can-i-make-a-bootstrap-5-modal-fit-image-content
+*/
+.modal-dialog {
+     max-width: max-content !important;
+}
+
+.modal-body {
+  /*display: flex;*/
+}
+
+/*
+"bootstrap 5 fit modal to image"
+https://raybo.org/posts/2021-03-27-consistent-height-carousels-with-css-gradients-by-hacking-the-bootstrap-5-carousel/
+*/
+.modal-body img {
+  object-fit: cover;
+  object-position: center;
+  max-height: 75vh;
+  overflow: hidden;
+}

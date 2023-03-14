@@ -28,7 +28,7 @@ function generateLightbox(container, index) {
     var first = true;
     for (var i = 0; i < screenshots.length; i++) {
         screenshotsMarkup += '<div class="carousel-item ' + (first ? ' active' : '') +'">' +
-            '<img class="d-block" src="' + screenshots[i] + '" alt="Screenshot' + (i + 1) + '"/></div>';
+            '<img src="' + screenshots[i] + '" alt="Screenshot' + (i + 1) + '"/></div>';
         first = false;
     }
     /*
@@ -63,7 +63,7 @@ function generateLightbox(container, index) {
     */
     
     lightbox.innerHTML = `
-        <div class="lightbox modal-dialog modal-xl modal-dialog-centered">
+        <div class="lightbox modal-dialog modal-dialog-centered modal-l">
             <div class="modal-content">
                 <div class="modal-body">
                     <div id="${carouselName}" class="carousel slide" data-bs-ride="carousel">

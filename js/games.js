@@ -101,7 +101,7 @@ export default [
     "platforms": "Windows",
     "description": "Here’s the kicker: our man Rod is subscribed to a hair loss treatment mail order service and must ration his treatment between deliveries." +
         "<span class='brsmall'></span><br/>" + 
-        "Made for Ludum Dare 50<br/>" +
+        "Made for Ludum Dare 50, April 2022<br/>" +
         "<span class='brsmall'></span><br/>" + 
         "Alexis Nocito - Art<br/>" +
         "Jason Quattrone - Concept, Music, and SFX<br/>" +
@@ -235,6 +235,21 @@ export default [
         "[In George Orwell's 1984,] the protagonist Winston Smith (a member of the Outer Party) works in the Ministry of Truth as an editor, revising historical records to make the past conform to the ever-changing party line and deleting references to unpersons, people who have been \"vaporised\", i.e. not only killed by the state, but denied existence even in history or memory.",
         "links": "[<a href=''>Download IPS patch</a>]",
         "platformClasses": "platform-other",
+  },
+
+  {
+    "title": "amoebae",
+    "thumbnail": "./img/amoebae/amoebae.png",
+    "screenshots": "./img/amoebae/screenshot1.jpg,./img/amoebae/screenshot2.jpg",
+    "platforms": "Windows, Linux, macOS",
+    "description": "Made for Ludum Dare 23, April 2012",
+    "links": "[<a href=''>Download for Windows</a>]" +
+        "<span class='brsmall'></span><br/>" + 
+        "[<a href=''>Download for macOS</a>]" +
+        "<span class='brsmall'></span><br/>" + 
+        "[<a href=''>Download for Linux</a>]" +
+        "<br/><small><em>The Linux version requires </em>[<a href=''>Love2d</a>]</small>",
+    "platformClasses": "platform-windows platform-linux platform-other",
   },
 
   {
