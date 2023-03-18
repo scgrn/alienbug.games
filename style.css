@@ -1,15 +1,9 @@
 :root {
-    --color-bg: #eeeeee;
-    --color-fg: #101112;
-
     --color-bg: rgb(238, 238, 238);
     --color-fg: rgb(0, 64, 92);
 }
 
 .dark-mode {
-    --color-bg: #101112;
-    --color-fg: #eeeeee;
-
     --color-bg: rgb(0, 16, 32);
     --color-fg: rgb(192, 255, 255);
 }

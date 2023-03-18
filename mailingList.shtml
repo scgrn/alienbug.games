@@ -1,20 +1,74 @@
 <!--#include file="./header.html" -->
 
+    <style>
+        .dynamic-content {
+            display: none;
+        }
+        
+        #signup {
+            display: inline;
+        }
+    </style>
+    
     <!-- content -->
     <div class="container my-5">
         <div class="row">
-            <div class="col-md-5 ms-auto me-auto justify-content-center text-center">
-                <h2 class="mb-4">Sign up for the mailing list!</h2>
-				<p>This list will inform of GAME RELEASE only.</p><br/>
-                <form id="contactForm" class="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="email" type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-                    <br/>
-                    <div style="margin-left: 10px;">
-                        [<a href="javascript:void(0)" onClick="javascript:()">Sign up</a>]
-                    </div>
-                </form>
+            <div class="col-md-8 ms-auto me-auto justify-content-center text-center">
+                <div id="signup" class="dynamic-content">
+                    <h2 class="mb-4">Sign up for the mailing list!</h2>
+                    <p>This list will inform of GAME RELEASE only.</p><br/>
+                    <form id="contactForm" class="contactForm">
+                        <div class="form-group col-md-6 offset-md-3">
+                            <input type="text" id="email" type="email" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <br/>
+                        <div style="margin-left: 10px;">
+                            [<a href="javascript:void(0)" onClick="javascript:()">Sign up</a>]
+                        </div>
+                    </form>
+                </div>
+
+                <div id="thanks" class="dynamic-content">
+                    <h2 class="mb-4">Thanks!</h2>
+                    <p>Check your email for a confirmation link.</p>
+                </div>
+
+                <div id="goodbye" class="dynamic-content">
+                    <h2 class="mb-4">You make us sad.</h2>
+                    <p>Goodbye.</p>
+                </div>
+
+                <div id="already-subscribed" class="dynamic-content">
+                    <h2 class="mb-4">Hey!</h2>
+                    <p>You're already <i>on</i> the mailing list.</p>
+                </div>
+
+                <div id="not-subscribed" class="dynamic-content">
+                    <h2 class="mb-4">Hey!</h2>
+                    <p>You're not <i>on</i> this mailing list!</p>
+                </div>
+
+                <div id="malformed" class="dynamic-content">
+                    <h2 class="mb-4">Whoa!</h2>
+                    <p>Your email address is <i>malformed</i>.</p>
+                </div>
+
+                <div id="welcome" class="dynamic-content">
+                    <h2 class="mb-4">Hey, welcome!</h2>
+                </div>
+
+                <div id="unsubscribe" class="dynamic-content">
+                    <h2 class="mb-4">Unsubscribe from mailing list:</h2>
+                    <form id="contactForm" class="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="email" type="email" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <br/>
+                        <div style="margin-left: 10px;">
+                            [<a href="javascript:void(0)" onClick="javascript:()">Unsubscribe</a>]
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

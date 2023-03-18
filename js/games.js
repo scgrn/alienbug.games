@@ -152,7 +152,7 @@ export default [
     "title": "Candy Smash",
     "thumbnail": "./img/candySmash/candySmash.png",
     "screenshots": "",
-    "platforms": "Windows, Linux, macOS",
+    "platforms": "Windows, Linux, MacOS",
     "description": "Action puzzle rotatary bubble shooter!<br/>" + 
         "Match three of the same color candy! There's literally no other game like it!" +
         "<span class='brsmall'></span><br/>" + 
@@ -241,11 +241,11 @@ export default [
     "title": "amoebae",
     "thumbnail": "./img/amoebae/amoebae.png",
     "screenshots": "./img/amoebae/screenshot1.jpg,./img/amoebae/screenshot2.jpg",
-    "platforms": "Windows, Linux, macOS",
+    "platforms": "Windows, Linux, MacOS",
     "description": "Made for Ludum Dare 23, April 2012",
     "links": "[<a href=''>Download for Windows</a>]" +
         "<span class='brsmall'></span><br/>" + 
-        "[<a href=''>Download for macOS</a>]" +
+        "[<a href=''>Download for MacOS</a>]" +
         "<span class='brsmall'></span><br/>" + 
         "[<a href=''>Download for Linux</a>]" +
         "<br/><small><em>The Linux version requires </em>[<a href=''>Love2d</a>]</small>",
