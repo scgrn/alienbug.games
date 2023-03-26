@@ -38,7 +38,7 @@
                     <div class="form-group">
                         <textarea class="form-control" name="message" rows="8" placeholder="Message"></textarea>
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6Le7LzMlAAAAAL2BWdlKZI2"></div>
+                    <div class="g-recaptcha" data-sitekey="6Le7LzMlAAAAAL2BWdlKZI2-GK075NBvfgsxWfKM"></div>
                     <br/>                    
                     <div id="status" class="m-2">&nbsp;</div>
                     <div style="margin-left: 10px;">
