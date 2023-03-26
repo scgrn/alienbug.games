@@ -1,5 +1,8 @@
 <!--#include file="./header.html" -->
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="module" src="./js/contactForm.js"></script>
+
     <!-- content -->
     <div class="container my-5" style="max-width: 960px;">
         <div class="row about mt-3 px-3">
@@ -35,6 +38,8 @@
                     <div class="form-group">
                         <textarea class="form-control" name="message" rows="8" placeholder="Message"></textarea>
                     </div>
+                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                    <br/>                    
                     <div id="status" class="m-2">&nbsp;</div>
                     <div style="margin-left: 10px;">
                         [<a href="javascript:void(0)" onClick="javascript:sendMail()">Submit for analysis</a>]
@@ -43,7 +48,5 @@
             </div>
         </div>
     </div>
-
-    <script type="module" src="./js/contactForm.js"></script>
 
 <!--#include file="./footer.html" -->
