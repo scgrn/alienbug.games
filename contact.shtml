@@ -44,4 +44,6 @@
         </div>
     </div>
 
+    <script type="module" src="./js/contactForm.js"></script>
+
 <!--#include file="./footer.html" -->
