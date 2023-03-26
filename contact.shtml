@@ -41,7 +41,6 @@
                     <div class="captcha-wrapper">
                         <div class="g-recaptcha" data-sitekey="6Le7LzMlAAAAAL2BWdlKZI2-GK075NBvfgsxWfKM"></div>
                     </div>
-                    <br/>                    
                     <div id="status" class="m-2">&nbsp;</div>
                     <div style="margin-left: 10px;">
                         [<a href="javascript:void(0)" onClick="javascript:sendMail()">Submit for analysis</a>]
