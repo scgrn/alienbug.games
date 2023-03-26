@@ -332,8 +332,12 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
 }
 
 /*  put a gratuitous border radius on dang near everything */
-*:not(.game-title,.game-links,.g-recaptcha,.fade,.carousel-control-prev-icon,.carousel-control-next-icon ) {
+*:not(.game-title,.game-links,.fade,.carousel-control-prev-icon,.carousel-control-next-icon ) {
     border-radius: 50px;
+}
+
+.captcha-wrapper, .captcha-wrapper * {
+    border-radius: 0px;
 }
 
 /*  --------------- style contact form ---------------- */
