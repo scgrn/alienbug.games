@@ -9,7 +9,7 @@
             <div class="col-md-6 order-md-last pb-5 justify-content-center text-center">
                 <div class="d-flex align-items-center">
                     <!-- <a href="https://en.wikipedia.org/wiki/Witzelsucht"> -->
-                    <img src="./img/photo.jpg" class="photo" alt="..."/>
+                    <img src="./img/photo.jpg" class="photo img-fluid" alt="..."/>
                     <!-- </a> -->
                 </div>
             </div>
