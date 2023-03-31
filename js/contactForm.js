@@ -31,10 +31,8 @@ export function sendMail() {
         },
         body: json
     }).then(async (response) => {
-        console.log(response);
         response.clone().json().then((data) => {
             grecaptcha.reset();
-            console.log(data);
 
             status.innerHTML = data.message;
             if (data.code == 1) {
@@ -52,9 +50,7 @@ export function sendMail() {
     });
 }
 
-function start() {
+document.addEventListener("DOMContentLoaded", function() {
     window.sendMail = sendMail
     window.recaptchaCallback = recaptchaCallback;
-}
-
-document.addEventListener("DOMContentLoaded", start);
+});
