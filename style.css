@@ -223,6 +223,13 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
     border-radius: 0;
     pointer-events:none;
 
+    image-rendering: optimizeSpeed;             /* Older versions of FF          */
+    image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+    image-rendering: -webkit-optimize-contrast; /* Safari                        */
+    image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+    image-rendering: pixelated;                 /* Awesome future-browsers       */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE                            */
+
     background-color: var(--color-bg);
 }
 
