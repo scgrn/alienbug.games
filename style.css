@@ -193,6 +193,8 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
     border-radius: 0 !important;
 }
 
+.logo svg { max-width:75%; max-height:100%; }
+
 .dropdown-toggle::after {
     margin-top: 0.5vw; float:right;
 }
