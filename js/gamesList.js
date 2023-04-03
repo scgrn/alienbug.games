@@ -142,6 +142,8 @@ function filterGames(platform) {
             selectedGames[i].style.display = "flex";
         }
     }
+
+    resetAlpha();
 }
 
 document.addEventListener("DOMContentLoaded", function() {

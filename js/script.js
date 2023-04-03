@@ -1,5 +1,7 @@
 "use strict";
 
+import { initGL, resetAlpha } from './static.js';
+
 var button;
 
 // Sets localStorage state
@@ -59,6 +61,8 @@ function toggleDarkMode(state) {
     colorSVG(state, "shape-right-arrow");
     colorSVG(state, "arrow-right");
     darkModeState = state;
+    
+    resetAlpha();
 }
 
 function initDropdown() {
@@ -78,5 +82,8 @@ toggleDarkMode(darkModeState);
 document.addEventListener("DOMContentLoaded", function() {
     initToggle();
     initDropdown();
+    initGL(document);
+    
     window.toggle = toggle;
+    window.resetAlpha = resetAlpha;
 });

@@ -213,13 +213,17 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 2000;
     width:    100%;
     height: 100%;
     opacity: 1;
     
     transform-origin: center;
     transform: scale(1.0);
+    border-radius: 0;
+    pointer-events:none;
+
+    background-color: var(--color-bg);
 }
 
 
