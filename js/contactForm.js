@@ -40,7 +40,8 @@ export function sendMail() {
                 form.reset();
             } else {
                 status.classList.add("error");
-            }        }).catch((error) => {
+            }
+        }).catch((error) => {
             grecaptcha.reset();
             console.log(error);
             status.classList.add("error");
