@@ -1,6 +1,7 @@
 :root {
     --color-bg: rgb(238, 238, 238);
     --color-fg: rgb(0, 64, 92);
+    --main-error-color: #ff3344;
 }
 
 .dark-mode {
@@ -207,6 +208,20 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
     font-weight: bold;
     color: var(--main-error-color);
 }
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width:    100%;
+    height: 100%;
+    opacity: 1;
+    
+    transform-origin: center;
+    transform: scale(1.0);
+}
+
 
 /* ----------- lightbox stuff ------------ */
 

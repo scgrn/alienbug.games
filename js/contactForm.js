@@ -36,14 +36,18 @@ export function sendMail() {
 
             status.innerHTML = data.message;
             if (data.code == 1) {
+                status.classList.remove("error");
                 form.reset();
-            }
-        }).catch((error) => {
+            } else {
+                status.classList.add("error");
+            }        }).catch((error) => {
             grecaptcha.reset();
             console.log(error);
+            status.classList.add("error");
             status.innerHTML = "Something went wrong!";
         }).then(function () {
             setTimeout(() => {
+                status.classList.remove("error");
                 status.innerHTML = "&nbsp;";
             }, 5000);
         });
