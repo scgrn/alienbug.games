@@ -45,10 +45,14 @@ function colorSVG(state, id) {
     let svg = document.getElementById(id);
     if (svg != null) {
         if (state == true) {
-            svg.fill = "var(--color-fg)";
+            svg.fill = "var(--color-fg) !important;";
+            svg.stroke = "var(--color-fg) !important;";
         } else {
-            svg.fill = "var(--color-bg)";
+            svg.fill = "var(--color-bg) !important;";
+            svg.stroke = "var(--color-bg) !important;";
         }
+    } else {
+        console.log("Couldn't find " + id);
     }
 }
 
@@ -57,9 +61,12 @@ function colorSVG(state, id) {
 function toggleDarkMode(state) {
     document.documentElement.classList.toggle("dark-mode", state);
     colorSVG(state, "logo");
+    colorSVG(state, "hamburgerSVG");
+    /*
     colorSVG(state, "shape-left-arrow");
     colorSVG(state, "shape-right-arrow");
     colorSVG(state, "arrow-right");
+    */
     darkModeState = state;
     
     resetAlpha();
