@@ -35,6 +35,9 @@
                             <input type="text" id="email" type="email" class="form-control" name="email" placeholder="Email">
                         </div>
                         <br/>
+<div class="button">
+    <input type="submit" name="submit" value="Join Our Announcement List">
+</div>
                         <div style="margin-left: 10px;">
                             [<a href="javascript:void(0)" onClick="document.getElementById('form').submit(); return false;">Sign up</a>]
                             <span style="margin: 20px;">or</span>
