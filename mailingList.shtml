@@ -4,10 +4,6 @@
         .dynamic-content {
             display: none;
         }
-        
-        #signup {
-            display: inline;
-        }
     </style>
     
     <!-- content -->
@@ -35,13 +31,11 @@
                             <input type="text" id="email" type="email" class="form-control" name="email" placeholder="Email">
                         </div>
                         <br/>
-<div class="button">
-    <input type="submit" name="submit" value="Join Our Announcement List">
-</div>
+
                         <div style="margin-left: 10px;">
                             [<a href="javascript:void(0)" onClick="document.getElementById('form').submit(); return false;">Sign up</a>]
                             <span style="margin: 20px;">or</span>
-                            [<a href="javascript:void(0)" onClick="document.getElementById('form').submit(); return false;">Unsubscribe</a>]
+                            [<a href="javascript:void(0)" onClick="document.getElementById('form').name.value='unsub';document.getElementById('form').submit(); return false;">Unsubscribe</a>]
                         </div>
                     </form>
                 </div>
@@ -70,16 +64,37 @@
                     <h2 class="mb-4">Whoa!</h2>
                     <p>Your email address is <i>malformed</i>.</p>
                 </div>
-
-                <div id="welcome" class="dynamic-content">
-                    <h2 class="mb-4">Hey, welcome!</h2>
-                </div>
             </div>
         </div>
     </div>
 
     <script>
         var params = window.location.search.substr(1);
-        console.log(params);
+        var showDefault = true;
+        if (params == "f=1") {
+            document.getElementById("thanks").style = "display: inline;";
+            showDefault = false;
+        }
+        if (params == "f=2") {
+            document.getElementById("goodbye").style = "display: inline;";
+            showDefault = false;
+        }
+        if (params == "f=3") {
+            document.getElementById("already-subscribed").style = "display: inline;";
+            showDefault = false;
+        }
+        if (params == "f=4") {
+            document.getElementById("not-subscribed").style = "display: inline;";
+            showDefault = false;
+        }
+        if (params == "f=5") {
+            document.getElementById("malformed").style = "display: inline;";
+            showDefault = false;
+        }
+
+        if (showDefault) {
+            document.getElementById("signup").style = "display: inline;";
+        }
     </script>
+
 <!--#include file="./footer.html" -->
