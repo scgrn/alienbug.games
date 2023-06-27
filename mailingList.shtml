@@ -17,13 +17,26 @@
                 <div id="signup" class="dynamic-content">
                     <h2 class="mb-4">Sign up for the mailing list!</h2>
                     <p>This list will inform of GAME RELEASE only.</p><br/>
-                    <form id="contactForm" class="contactForm">
+                    <form method="post" id="form" action="http://scripts.dreamhost.com/add_list.cgi"> 
+                        <input type="hidden" name="list" value="mailinglist" /> 
+                        <input type="hidden" name="domain" value="alienbug.games" /> 
+                        <input type="hidden" name="url" value="https://alienbug.games/mailingList.shtml?f=1" /> 
+                        <input type="hidden" name="unsuburl" value="https://alienbug.games/mailingList.shtml?f=2" /> 
+                        <input type="hidden" name="alreadyonurl" value="https://alienbug.games/mailingList.shtml?f=3" /> 
+                        <input type="hidden" name="notonurl" value="https://alienbug.games/mailingList.shtml?f=4" /> 
+                        <input type="hidden" name="invalidurl" value="https://alienbug.games/mailingList.shtml?f=5" /> 
+                        <input type="hidden" name="emailconfirmurl" value="https://alienbug.games/mailingList.shtml?f=6" /> 
+                        <input type="hidden" name="missingrequrl" value="https://alienbug.games/mailinList.shtml?f=5" />
+                        <input type="hidden" name="emailit" value="1" /> 
+
                         <div class="form-group col-md-6 offset-md-3">
                             <input type="text" id="email" type="email" class="form-control" name="email" placeholder="Email">
                         </div>
                         <br/>
                         <div style="margin-left: 10px;">
-                            [<a href="javascript:void(0)" onClick="javascript:()">Sign up</a>]
+                            [<a href="javascript:void(0)" onClick="document.getElementById('form').submit(); return false;">Sign up</a>]
+                            <span style="margin: 20px;">or</span>
+                            [<a href="javascript:void(0)" onClick="document.getElementById('form').submit(); return false;">Unsubscribe</a>]
                         </div>
                     </form>
                 </div>
@@ -55,19 +68,6 @@
 
                 <div id="welcome" class="dynamic-content">
                     <h2 class="mb-4">Hey, welcome!</h2>
-                </div>
-
-                <div id="unsubscribe" class="dynamic-content">
-                    <h2 class="mb-4">Unsubscribe from mailing list:</h2>
-                    <form id="contactForm" class="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="email" type="email" class="form-control" name="email" placeholder="Email">
-                        </div>
-                        <br/>
-                        <div style="margin-left: 10px;">
-                            [<a href="javascript:void(0)" onClick="javascript:()">Unsubscribe</a>]
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
