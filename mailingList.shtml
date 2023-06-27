@@ -20,6 +20,8 @@
                     <form method="post" id="form" action="https://scripts.dreamhost.com/add_list.cgi"> 
                         <input type="hidden" name="list" value="mailinglist" /> 
                         <input type="hidden" name="domain" value="alienbug.games" /> 
+                        <input type="hidden" name="name" value="submit" /> 
+                        
                         <input type="hidden" name="url" value="https://alienbug.games/mailingList.shtml?f=1" /> 
                         <input type="hidden" name="unsuburl" value="https://alienbug.games/mailingList.shtml?f=2" /> 
                         <input type="hidden" name="alreadyonurl" value="https://alienbug.games/mailingList.shtml?f=3" /> 
@@ -73,4 +75,8 @@
         </div>
     </div>
 
+    <script>
+        var params = window.location.search.substr(1);
+        console.log(params);
+    </script>
 <!--#include file="./footer.html" -->
