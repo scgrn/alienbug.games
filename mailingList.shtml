@@ -23,8 +23,8 @@
                         <input type="hidden" name="alreadyonurl" value="https://alienbug.games/mailingList.shtml?f=3" /> 
                         <input type="hidden" name="notonurl" value="https://alienbug.games/mailingList.shtml?f=4" /> 
                         <input type="hidden" name="invalidurl" value="https://alienbug.games/mailingList.shtml?f=5" /> 
+                        <input type="hidden" name="missingrequrl" value="https://alienbug.games/mailingList.shtml?f=5" />
                         <input type="hidden" name="emailconfirmurl" value="https://alienbug.games/mailingList.shtml?f=6" /> 
-                        <input type="hidden" name="missingrequrl" value="https://alienbug.games/mailinList.shtml?f=5" />
                         <input type="hidden" name="emailit" value="1" /> 
 
                         <div class="form-group col-md-6 offset-md-3">
@@ -64,6 +64,10 @@
                     <h2 class="mb-4">Whoa!</h2>
                     <p>Your email address is <i>malformed</i>.</p>
                 </div>
+                
+                <div id="welcome" class="dynamic-content">
+                    <h2 class="mb-4">Hey, welcome!</h2>
+                </div>
             </div>
         </div>
     </div>
@@ -89,6 +93,10 @@
         }
         if (params == "f=5") {
             document.getElementById("malformed").style = "display: inline;";
+            showDefault = false;
+        }
+        if (params == "f=6") {
+            document.getElementById("welcome").style = "display: inline;";
             showDefault = false;
         }
 
