@@ -27,7 +27,7 @@
                         <input type="hidden" name="emailit" value="1" /> 
 
                         <div class="form-group col-md-6 offset-md-3">
-                            <input type="text" id="email" type="email" class="form-control" name="email" placeholder="Email">
+                            <input type="text" id="email" type="email" class="form-control" name="email" placeholder="Enter email address">
                         </div>
                         <br/>
 
