@@ -17,7 +17,7 @@
                 <div id="signup" class="dynamic-content">
                     <h2 class="mb-4">Sign up for the mailing list!</h2>
                     <p>This list will inform of GAME RELEASE only.</p><br/>
-                    <form method="post" id="form" action="http://scripts.dreamhost.com/add_list.cgi"> 
+                    <form method="post" id="form" action="https://scripts.dreamhost.com/add_list.cgi"> 
                         <input type="hidden" name="list" value="mailinglist" /> 
                         <input type="hidden" name="domain" value="alienbug.games" /> 
                         <input type="hidden" name="url" value="https://alienbug.games/mailingList.shtml?f=1" /> 
