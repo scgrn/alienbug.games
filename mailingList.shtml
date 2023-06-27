@@ -69,7 +69,7 @@
     </div>
 
     <script>
-        var params = window.location.search.substr(1);
+        var params = window.location.search.substring(1, 4);
         var showDefault = true;
         if (params == "f=1") {
             document.getElementById("thanks").style = "display: inline;";
