@@ -16,7 +16,6 @@
                     <form method="post" id="form" action="https://scripts.dreamhost.com/add_list.cgi"> 
                         <input type="hidden" name="list" value="mailinglist" /> 
                         <input type="hidden" name="domain" value="alienbug.games" /> 
-                        <input type="hidden" name="name" value="submit" /> 
                         
                         <input type="hidden" name="url" value="https://alienbug.games/mailingList.shtml?f=1" /> 
                         <input type="hidden" name="unsuburl" value="https://alienbug.games/mailingList.shtml?f=2" /> 
@@ -32,10 +31,12 @@
                         </div>
                         <br/>
 
-                        <div style="margin-left: 10px;">
-                            [<a href="javascript:void(0)" onClick="document.getElementById('form').submit(); return false;">Sign up</a>]
-                            <span style="margin: 20px;">or</span>
-                            [<a href="javascript:void(0)" onClick="document.getElementById('form').name.value='unsub';document.getElementById('form').submit(); return false;">Unsubscribe</a>]
+                        <div class="button">
+                            <input type="submit" style="font-size: 1.15em;" name="submit" value="Subscribe">
+                        </div>
+                        <span style="margin: 20px;">or</span>
+                        <div class="button">
+                            <input type="submit" style="font-size: 0.75em;" name="unsub" value="Unsubscribe">
                         </div>
                     </form>
                 </div>
@@ -63,6 +64,7 @@
                 <div id="malformed" class="dynamic-content">
                     <h2 class="mb-4">Whoa!</h2>
                     <p>Your email address is <i>malformed</i>.</p>
+                    <p>Why don't you [<a href="./mailingList.shtml">try that again?</a>]</p>
                 </div>
                 
                 <div id="welcome" class="dynamic-content">
@@ -73,6 +75,8 @@
     </div>
 
     <script>
+        "use strict";
+        
         var params = window.location.search.substring(1, 4);
         var showDefault = true;
         if (params == "f=1") {
