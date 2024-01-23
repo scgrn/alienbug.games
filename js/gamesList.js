@@ -31,37 +31,7 @@ function generateLightbox(container, index) {
             '<img src="' + screenshots[i] + '" alt="Screenshot' + (i + 1) + '"/></div>';
         first = false;
     }
-    /*
-    lightbox.innerHTML = `
-        <div class="lightbox modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div id="${carouselName}" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            ${screenshotsMarkup}
-                        </div>
 
-                        <a class="carousel-control-prev lightbox" href="#${carouselName}" role="button" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </a>
-                        <a class="carousel-control-next lightbox" href="#${carouselName}" role="button" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </a>
-                    
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-
-            </div>
-        </div>
-    `;
-    */
-    
     lightbox.innerHTML = `
         <div class="lightbox modal-dialog modal-dialog-centered modal-l">
             <div class="modal-content">

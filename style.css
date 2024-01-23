@@ -154,7 +154,6 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
     padding-right: 40px !important;
 }
 
-/* https://www.geeksforgeeks.org/how-to-change-the-height-of-br-tag/ */
 .brsmall {
     display: block;
     margin-bottom: -0.75em;
@@ -212,7 +211,6 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
     margin-top: 0.5vw; float:right;
 }
 
-
 .form-control {
     border-radius: unset;
     margin-top: 15px;
@@ -242,128 +240,12 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
     background-color: var(--color-bg);
 }
 
-
-/* ----------- lightbox stuff ------------ */
-
-/* https://stackoverflow.com/questions/32168234/change-the-bootstrap-modal-effect */
-.modal.fade .modal-dialog {
-    transform: scale(0.1);
-    opacity: 0;
-    transition: all 0.5s;
+.photo {
+    border: 2px solid;
 }
-
-.modal.fade.show .modal-dialog {
-    transform: scale(1);
-    opacity: 1;
-    transition: all 0.5s;
-}
-
-/* Crop images in lightbox. */
 
 .thumbnail {
     cursor: pointer;
-}
-
-.carousel-item img {
-    height: 60vw;
-    object-fit: cover;
-}
-
-@media (min-width: 576px) {
-    .carousel-item img {
-        width: 100%;
-        height: 80vh;
-    }
-}
-.carousel-inner > .carousel-item > img {
-/*
-    width: 800px;
-    height: 480px;
-*/
-}
-
-.lightbox .modal-content {
-    background: none;
-    border: none;
-}
-
-.lightbox .modal-header {
-    border: none;
-}	
-
-.lightbox .modal-body {
-    padding: 0;
-    border: 2px solid;
-    border-color: var(--color-fg);
-    border-radius: 50px;
-    position: relative;
-}
-
-.lightbox .modal-footer {
-    border: none;
-}
-
-.lightbox .modal-footer .btn {
-    margin: auto;
-    border: solid 2px var(--color-fg);
-    background: var(--color-bg);
-    color: var(--color-fg);
-    text-transform: uppercase;
-    font-size: 0.8em;
-    letter-spacing: 0.1em;
-    font-weight: bold;
-    padding: 0.2em 0.7em;
-    border-radius: 0;
-}
-
-.lightbox .modal-footer .btn:hover {
-    background: var(--color-fg);
-    color: var(--color-bg);
-}
-
-@media (min-width: 768px) {
-    .lightbox .carousel-control-prev {
-        left: -110px;
-    }
-}
-
-@media (min-width: 768px) {
-    .lightbox .carousel-control-next {
-        right: -110px;
-    }
-}
-
-/* https://stackoverflow.com/questions/46249541/change-arrow-colors-in-bootstraps-carousel */
-.carousel-control-prev-icon {
-/*    
-    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 50 200'%3E%3Cpolygon points='50 0, 0 100, 50 200'/%3E%3C/svg%3E"); 
-    transform: scale(4.0);
-
-    background-image: <svg xmlns='http://www.w3.org/2000/svg'><use xlink:href="#left-arrow"/></svg>;
-*/
-/*
-    background: url("./img/svg-defs.svg#shape-left-arrow-view") no-repeat;
-*/
-    width: 50px;
-    height: 200px;
-}
-
-.carousel-control-next-icon { 
-/*
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 50 200'%3E%3Cpolygon points='0 0, 50 100, 0 200'/%3E%3C/svg%3E");
-    transform: scale(4.0);
-
-    background-image: <svg xmlns='http://www.w3.org/2000/svg'><use xlink:href="#right-arrow"/></svg>;
-*/
-/*
-    background: url("./img/svg-defs.svg#shape-right-arrow-view") no-repeat;
-*/
-    width: 50px;
-    height: 200px;
-}
-
-.photo {
-    border: 2px solid;
 }
 
 /*  put a gratuitous border radius on dang near everything */
@@ -391,28 +273,3 @@ input, textarea {
     border: none !important;
 }
 
-
-
-
-
-/*
-https://stackoverflow.com/questions/72803938/how-can-i-make-a-bootstrap-5-modal-fit-image-content
-*/
-.modal-dialog {
-     max-width: max-content !important;
-}
-
-.modal-body {
-  /*display: flex;*/
-}
-
-/*
-"bootstrap 5 fit modal to image"
-https://raybo.org/posts/2021-03-27-consistent-height-carousels-with-css-gradients-by-hacking-the-bootstrap-5-carousel/
-*/
-.modal-body img {
-  object-fit: cover;
-  object-position: center;
-  max-height: 75vh;
-  overflow: hidden;
-}
