@@ -3,70 +3,73 @@
 import data from './games.js';
 
 function generateLightbox(container, index) {
-    const modalName = "modal" + index;
-    const carouselName = "carousel" + index;
+    const screenshots = data[index].screenshots.split(",");
 
-    container.setAttribute("data-bs-toggle", "modal");
-    container.setAttribute("data-bs-target", "#" + modalName);
+    //  clear previous screenshots in the lightbox
+    const screenshotContainer = document.getElementById('screenshotContainer');
+    screenshotContainer.innerHTML = '';
 
+    //  populate the lightbox with screenshots
+    screenshots.forEach((url, i) => {
+        const itemClass = i === 0 ? 'carousel-item active' : 'carousel-item';
+        const imgElement = document.createElement('img');
+        imgElement.src = url;
+        imgElement.className = 'd-block w-100';
+
+        const carouselItem = document.createElement('div');
+        carouselItem.className = itemClass;
+        carouselItem.appendChild(imgElement);
+
+        screenshotContainer.appendChild(carouselItem);
+    });
+
+    // show lightbox
+    const lightbox = document.getElementById('gameLightbox');
+    lightbox.style.display = 'block';
+
+    //  add class to disable scrolling
+    document.body.classList.add('lightbox-open');
+}
+
+function generateThumbnail(container, index) {
     const thumbnail = document.createElement("img");
     thumbnail.className += "thumbnail";
     thumbnail.setAttribute("src", data[index].thumbnail);
-    thumbnail.setAttribute("data-bs-target", "#" + carouselName);
-    thumbnail.setAttribute("data-bs-slide-to", "0");
     container.appendChild(thumbnail);
 
-    const lightbox = document.createElement("div");
-    lightbox.id = modalName;
-    lightbox.className += "modal fade";
-    lightbox.setAttribute("tabindex", "-1");
-    lightbox.setAttribute("role", "dialog");
-    lightbox.setAttribute("aria-hidden", "true");
-        
-    var screenshotsMarkup = "";
-    const screenshots = data[index].screenshots.split(",");
-    var first = true;
-    for (var i = 0; i < screenshots.length; i++) {
-        screenshotsMarkup += '<div class="carousel-item ' + (first ? ' active' : '') +'">' +
-            '<img src="' + screenshots[i] + '" alt="Screenshot' + (i + 1) + '"/></div>';
-        first = false;
-    }
+    thumbnail.addEventListener('click', function() {
+        generateLightbox(container, index);
+    });
 
-    lightbox.innerHTML = `
-        <div class="lightbox modal-dialog modal-dialog-centered modal-l">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div id="${carouselName}" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            ${screenshotsMarkup}
-                        </div>
-
-                        <a class="carousel-control-prev lightbox" href="#${carouselName}" role="button" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </a>
-                        <a class="carousel-control-next lightbox" href="#${carouselName}" role="button" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" id="arrow-right" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </a>
-                    
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-
-            </div>
-        </div>
-    `;
-
-    document.body.appendChild(lightbox);
+    container.appendChild(thumbnail);
 }
+
+function closeLightbox() {
+    const lightbox = document.getElementById('gameLightbox');
+    lightbox.style.display = 'none';
+
+    //  remove class to enable scrolling
+    document.body.classList.remove('lightbox-open');
+}
+
+//  close the lightbox when clicking outside the carousel
+document.getElementById('gameLightbox').addEventListener('click', function (e) {
+    if (e.target === this) {
+        closeLightbox();
+    }
+});
+
+//  close the lightbox when clicking the close button
+document.querySelector('.lightbox-content').addEventListener('click', function (e) {
+    if (e.target.classList.contains('carousel-control-prev-icon') || e.target.classList.contains('carousel-control-next-icon')) {
+        return;
+    }
+    closeLightbox();
+});
 
 function addGames() {
     var container= document.getElementById("games");
-    
+
     var count = Object.keys(data).length;
     for (var i = 0; i < count; i++) {
         const element = document.createElement("div");
@@ -76,8 +79,8 @@ function addGames() {
         const thumbnail = document.createElement("div");
         thumbnail.id = "thumbnail" + i;
         thumbnail.className += "col-md-4 mb-4 text-center";
-        generateLightbox(thumbnail, i);
-        
+        generateThumbnail(thumbnail, i);
+
         const description = document.createElement("div");
         description.className += "col-md-8";
         description.innerHTML +=  `
@@ -88,10 +91,10 @@ function addGames() {
 
         element.appendChild(thumbnail);
         element.appendChild(description);
-        
+
         container.appendChild(element);
     }
-    
+
     console.log(i + " games total");
 }
 

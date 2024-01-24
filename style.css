@@ -249,7 +249,7 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
 }
 
 /*  put a gratuitous border radius on dang near everything */
-*:not(.game-title,.game-links,.fade,.carousel-control-prev-icon,.carousel-control-next-icon ) {
+*:not(.game-title,.game-links,.fade,.lightbox,.carousel-control-prev-icon,.carousel-control-next-icon ) {
     border-radius: 50px;
 }
 
@@ -258,6 +258,7 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
 }
 
 /*  --------------- style contact form ---------------- */
+
 textarea {
     border-radius: 25px !important;
 }
@@ -272,4 +273,47 @@ input, textarea {
     background-color: var(--color-fg) !important;
     border: none !important;
 }
+
+/*---------------------- lightbox -----------------------*/
+
+/*  disable scrolling when the lightbox is open  */
+body.lightbox-open {
+    overflow: hidden;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2999;
+    overflow: auto;
+}
+
+.lightbox-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    max-width: 80%;
+    max-height: 90%;
+    
+    border: 2px solid;
+    border-color: var(--color-fg);
+    border-radius: 50px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 90vh;
+    margin: auto;
+    display: block;
+}
+
 
