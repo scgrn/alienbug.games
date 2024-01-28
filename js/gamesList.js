@@ -2,48 +2,40 @@
 
 import data from './games.js';
 
-function generateLightbox(container, index) {
+function generateLightbox(index) {
+    var screenshotsMarkup = "";
     const screenshots = data[index].screenshots.split(",");
-
-    //  clear previous screenshots in the lightbox
-    const screenshotContainer = document.getElementById('screenshotContainer');
-    screenshotContainer.innerHTML = '';
-
-    //  populate the lightbox with screenshots
-    screenshots.forEach((url, i) => {
-        const itemClass = i === 0 ? 'carousel-item active' : 'carousel-item';
-        const imgElement = document.createElement('img');
-        imgElement.src = url;
-        imgElement.className = 'd-block w-100';
-
-        const carouselItem = document.createElement('div');
-        carouselItem.className = itemClass;
-        carouselItem.appendChild(imgElement);
-
-        screenshotContainer.appendChild(carouselItem);
-    });
-
-    // show lightbox
-    const lightbox = document.getElementById('gameLightbox');
-    lightbox.style.display = 'block';
-
-    //  add class to disable scrolling
-    document.body.classList.add('lightbox-open');
+    var first = true;
+    for (var i = 0; i < screenshots.length; i++) {
+        screenshotsMarkup += '<div class="carousel-item ' + (first ? ' active' : '') +'">' +
+            '<img src="' + screenshots[i] + '" class="d-block w-100" alt="Screenshot' + (i + 1) + '"/></div>';
+        first = false;
+    }
+    
+    var carousel = document.getElementById("carousel-inner");
+    carousel.innerHTML = screenshotsMarkup;
+    
+    var lightbox = document.getElementById("lightbox");
+    var modal = bootstrap.Modal.getInstance(lightbox);
+    modal.show();
 }
 
 function generateThumbnail(container, index) {
     const thumbnail = document.createElement("img");
     thumbnail.className += "thumbnail";
     thumbnail.setAttribute("src", data[index].thumbnail);
-    container.appendChild(thumbnail);
 
+    thumbnail.setAttribute("data-bs-slide-to", "0");
+    thumbnail.setAttribute("data-bs-toggle", "modal");
+    thumbnail.setAttribute("data-bs-target", "#lightbox");
     thumbnail.addEventListener('click', function() {
-        generateLightbox(container, index);
+        generateLightbox(index);
     });
 
     container.appendChild(thumbnail);
 }
 
+/*
 function closeLightbox() {
     const lightbox = document.getElementById('gameLightbox');
     lightbox.style.display = 'none';
@@ -66,6 +58,7 @@ document.querySelector('.lightbox-content').addEventListener('click', function (
     }
     closeLightbox();
 });
+*/
 
 function addGames() {
     var container= document.getElementById("games");
@@ -123,4 +116,4 @@ document.addEventListener("DOMContentLoaded", function() {
     addGames();
     window.filterGames = filterGames;
 });
-    
+
