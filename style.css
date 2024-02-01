@@ -257,7 +257,7 @@ a:hover:not(.logo,.lightbox), a:active:not(.logo,.lightbox) {
     border-radius: 0px;
 }
 
-/*  --------------- style contact form ---------------- */
+/*  --------------- contact form ---------------- */
 
 textarea {
     border-radius: 25px !important;
@@ -275,6 +275,7 @@ input, textarea {
 }
 
 /*---------------------- lightbox -----------------------*/
+
 .lightbox {
     display: none;
     position: fixed;
@@ -294,14 +295,12 @@ input, textarea {
     transform: translate(-50%, -50%);
     text-align: center;
 
-    max-width: 95vw;
-    max-height: 95vh;
+    width: 200%;    /* questionable, at best. */
 
-    background-color: var(--color-bg);
+    max-width: 100vw;
+    max-height: 100vh;
 
-    border: 2px solid;
-    border-color: var(--color-fg);
-    border-radius: 50px;
+    background-color: transparent;
 }
 
 #lightbox .modal-dialog .carousel-inner .carousel-item img {
@@ -311,6 +310,13 @@ input, textarea {
     height: auto;
     margin: auto;
     object-fit: contain;
+}
+
+.carousel-inner {
+    background-color: var(--color-bg);
+
+    border: 2px solid;
+    border-color: var(--color-fg);
 }
 
 .modal.fade .modal-dialog {
@@ -325,4 +331,24 @@ input, textarea {
     transition: all 0.5s;
 }
 
+.modal-footer {
+    border: none;
+}
 
+.modal-footer .btn {
+    margin: auto;
+    border: solid 2px var(--color-fg);
+    background: var(--color-bg);
+    color: var(--color-fg);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    padding: 0.2em 0.7em;
+    border-radius: 0;
+}
+
+.modal-footer .btn:hover {
+    background: var(--color-fg);
+    color: var(--color-bg);
+}
