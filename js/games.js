@@ -62,7 +62,7 @@ export default [
   {
     "title": "BATTLESNAKE:<br/>Escape From Yak Planet",
     "thumbnail": "./img/battlesnake/battlesnake.png",
-    "screenshots": "",
+    "screenshots": "./img/battlesnake/1.png,./img/battlesnake/2.png,./img/battlesnake/3.png,./img/battlesnake/4.png",
     "platforms": "Web",
     "description": "Missed the deadline for #cyberpunkjam,<br/>" +
         "submitted for #proceduraldeathjam",
@@ -127,7 +127,7 @@ export default [
   {
     "title": "Hayseed",
     "thumbnail": "./img/hayseed/hayseed.png",
-    "screenshots": "",
+    "screenshots": "./img/hayseed/1.png,./img/hayseed/2.png,./img/hayseed/3.png",
     "platforms": "Android, Web",
     "description": "\"There's nothing more foolish than a man chasing his hat.\"" +
         "<span class='brsmall'></span><br/>" + 
@@ -151,7 +151,7 @@ export default [
   {
     "title": "Candy Smash",
     "thumbnail": "./img/candySmash/candySmash.png",
-    "screenshots": "",
+    "screenshots": "./img/candySmash/1.png,./img/candySmash/2.png,./img/candySmash/3.png,./img/candySmash/4.png",
     "platforms": "Windows, Linux, MacOS",
     "description": "Action puzzle rotatary bubble shooter!<br/>" + 
         "Match three of the same color candy! There's literally no other game like it!" +
@@ -192,7 +192,7 @@ export default [
   {
     "title": "eat!?",
     "thumbnail": "./img/eat/eat.png",
-    "screenshots": "",
+    "screenshots": "./img/eat/1.png,./img/eat/2.png,./img/eat/3.png,./img/eat/4.png,./img/eat/5.png",
     "platforms": "Web",
     "description": 'Tied for first place in the 2005 "1 Week / 1 Button" contest<br/>' +
         "<span class='brsmall'></span><br/>" + 
