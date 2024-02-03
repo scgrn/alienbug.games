@@ -323,7 +323,7 @@ input, textarea {
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: 0.1em;
-    font-weight: bold;
+    font-weight: bolder;    /* TODO: not supported by font */
     padding: 0.2em 0.7em;
     border-radius: 0;
 }
@@ -350,6 +350,16 @@ input, textarea {
     -webkit-text-stroke: 1px var(--color-bg);
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1 !important;
+}
+
+.carousel-control-prev-icon:active,
+.carousel-control-next-icon:active {
+    transform: scale(2, 8);
+}
+
 @media (min-width: 900px) {
     .carousel-control-prev {
         left: -110px;
@@ -360,16 +370,5 @@ input, textarea {
     .carousel-control-next {
         right: -110px;
     }
-}
-
-
-.carousel-control-prev,
-.carousel-control-next {
-    opacity: 1 !important;
-}
-
-.carousel-control-prev-icon:active,
-.carousel-control-next-icon:active {
-    transform: scale(2, 8);
 }
 
