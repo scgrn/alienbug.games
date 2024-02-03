@@ -360,35 +360,24 @@ input, textarea {
     background-size: 100%, 100%;
 }
 
-.carousel-control-next-icon::after, .carousel-control-prev-icon::after {
-    display: flex;
-    transform-origin: 50% 65%;
-    transform: scaleY(3);
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    transform-origin: 50% 45%;
+    transform: scale(3, 12);
 
     color: var(--color-fg);
-    font-size: 64px;
-
+    
     -webkit-text-fill-color: var(--color-fg);
-    -webkit-text-stroke: 3px var(--color-bg);
+    -webkit-text-stroke: 1px var(--color-bg);
 }
 
-.carousel-control-next-icon::after {
-    content: '►';
-}
-
-.carousel-control-prev-icon::after {
-    content: '◄';
-}
-
-@media (min-width: 768px) {
+@media (min-width: 900px) {
     .carousel-control-prev {
-        left: -125px;
+        left: -110px;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
     .carousel-control-next {
         right: -110px;
     }
 }
-
