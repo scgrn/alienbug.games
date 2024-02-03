@@ -9,26 +9,6 @@
     --color-fg: rgb(192, 255, 255);
 }
 
-/*
-@include media-breakpoint-up(sm) {
-    html {
-        font-size: 1.2rem;
-    }
-}
-
-@include media-breakpoint-up(md) {
-    html {
-        font-size: 1.4rem;
-    }
-}
-
-@include media-breakpoint-up(lg) {
-    html {
-        font-size: 1.6rem;
-    }
-}
-*/
-
 /* raleway-regular - latin */
 @font-face {
   font-family: 'Raleway';
@@ -381,3 +361,15 @@ input, textarea {
         right: -110px;
     }
 }
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1 !important;
+}
+
+.carousel-control-prev-icon:active,
+.carousel-control-next-icon:active {
+    transform: scale(2, 8);
+}
+
