@@ -180,7 +180,7 @@ export default [
   {
     "title": "GALAXA",
     "thumbnail": "./img/galaxa/galaxa.jpg",
-    "screenshots": "",
+    "screenshots": "./img/galaxa/1.png,./img/galaxa/2.png,./img/galaxa/3.png,./img/galaxa/4.png",
     "platforms": "Android, Nintendo Game Boy",
     "description": "Made for charity game jam, proceeds benefit [<a href='https://www.aspca.org/'>ASPCA</a>]",
     "links": "[<a href='https://play.google.com/store/apps/details?id=net.alienbug.galaxa'>Available on Google Play</a>]<br/>" +
@@ -206,7 +206,7 @@ export default [
   {
     "title": "Derivative Dungeon",
     "thumbnail": "./img/derivativeDungeon/derivativeDungeon.jpg",
-    "screenshots": "",
+    "screenshots": "./img/derivativeDungeon/1.png,./img/derivativeDungeon/2.png,./img/derivativeDungeon/3.png,./img/derivativeDungeon/4.png,./img/derivativeDungeon/5.png,./img/derivativeDungeon/6.png",
     "platforms": "Anything with a C compiler",
     "description": "A terminal-based roguelike RPG-ish dungeon crawler thing, WIP",
     "links": "[<a href='https://github.com/scgrn/DerivativeDungeon'>Source available on Github</a>]",
@@ -255,7 +255,7 @@ export default [
   {
     "title": "Alpha Quadrant",
     "thumbnail": "./img/alphaQuadrant/alphaQuadrant.png",
-    "screenshots": "",
+    "screenshots": "./img/alphaQuadrant/1.png,./img/alphaQuadrant/2.png,./img/alphaQuadrant/3.png,./img/alphaQuadrant/4.png,./img/alphaQuadrant/5.png",
     "platforms": "Android",
     "description": "You bring the thumbs and we'll bring the moxie" +
         "<span class='brsmall'></span><br/>" + 
