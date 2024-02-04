@@ -216,7 +216,7 @@ export default [
   {
     "title": "Hydra",
     "thumbnail": "./img/hydra/hydra.png",
-    "screenshots": "",
+    "screenshots": "./img/hydra/1.png,./img/hydra/2.png,./img/hydra/3.png,./img/hydra/4.png",
     "platforms": "Pico-8",
     "description": "A procedurally generated hack-n-slash action adventure for the Pico-8 fantasy console!",
     "links": "[<a href=''>Download cartridge</a>]<br/>" + 
