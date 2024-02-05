@@ -228,7 +228,7 @@ export default [
   {
     "title": "Punch-Out 2012",
     "thumbnail": "./img/po2012/po2012.png",
-    "screenshots": "",
+    "screenshots": "./img/po2012/1.png",
     "platforms": "NES/Famicom ROM hack",
     "description": "<i>From [<a href='http://en.wikipedia.org/wiki/1984_novel'>Wikipedia</a>]:</i>" +
         "<span class='brsmall'></span><br/>" + 
