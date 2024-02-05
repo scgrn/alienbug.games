@@ -86,7 +86,6 @@ input {
 }
 
 #hamburger-line {
-    display: inline-block;
     width: 80%;
     border: none;
     border-bottom: 1px solid var(--color-fg);
