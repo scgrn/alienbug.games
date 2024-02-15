@@ -224,7 +224,7 @@ export default [
         "[<a href=''>Play online</a>]",
     "platformClasses": "platform-web platform-other",
   },
-
+/*
   {
     "title": "Punch-Out 2012",
     "thumbnail": "./img/po2012/po2012.png",
@@ -236,7 +236,7 @@ export default [
         "links": "[<a href=''>Download IPS patch</a>]",
         "platformClasses": "platform-other",
   },
-
+*/
   {
     "title": "amoebae",
     "thumbnail": "./img/amoebae/amoebae.png",
