@@ -28,9 +28,23 @@ if (!is_file($file_path)) {
 $log = date('Y-m-d H:i:s') . " - " . $file_name . "\n";
 file_put_contents('/home/scgrn/files/downloads.log', $log, FILE_APPEND);
 
+//  set MIME type
+$content_types = [
+    'zip' => 'application/zip',
+    'gzip' => 'application/gzip',
+    '7z' => 'application/x-7z-compressed',
+    'tar' => 'application/x-tar',
+    'rar' => 'application/vnd.rar',
+    'exe' => 'application/vnd.microsoft.portable-executable',
+    'apk' => 'application/vnd.android.package-archive',
+    'jar' => 'application/java-archive',
+];
+$file_ext = pathinfo($file_name, PATHINFO_EXTENSION);
+$ctype = isset($content_types[$file_ext]) ? $content_types[$file_ext] : 'application/octet-stream';
+
 //  set headers to trigger download
 header('Content-Description: File Transfer');
-header('Content-Type: application/octet-stream');
+header('Content-Type: ' . $ctype);
 header('Content-Disposition: attachment; filename="' . $file_name . '"');
 header('Expires: 0');
 header('Cache-Control: must-revalidate');
@@ -38,7 +52,9 @@ header('Pragma: public');
 header('Content-Length: ' . filesize($file_path));
 
 //  clear output buffer
-ob_clean();
+if (ob_get_length()) {
+    ob_clean();
+}
 flush();
 
 //  output the file
