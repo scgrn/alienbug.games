@@ -26,7 +26,7 @@ if (!is_file($file_path)) {
 
 //  log download
 $log = date('Y-m-d H:i:s') . " - " . $file_name . "\n";
-file_put_contents('downloads.log', $log, FILE_APPEND);
+file_put_contents('/home/scgrn/files/downloads.log', $log, FILE_APPEND);
 
 //  set headers to trigger download
 header('Content-Description: File Transfer');
