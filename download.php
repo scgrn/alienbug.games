@@ -2,7 +2,7 @@
 
 //  check for file parameter
 if (!isset($_REQUEST['file']) || empty($_REQUEST['file'])) {
-    header("HTTP/1.0 400 Bad Request");
+    header("Location: missing.html");
     exit;
 }
 
@@ -15,12 +15,12 @@ $allowed_files = [
 ];
 
 if (!in_array($file_name, $allowed_files)) {
-    header("HTTP/1.0 400 Bad Request");
+    header("Location: missing.html");
     exit;
 }
 
 if (!is_file($file_path)) {
-    header("HTTP/1.0 404 Not Found");
+    header("Location: missing.html");
     exit;
 }
 
