@@ -260,7 +260,7 @@ export default [
     "description": "You bring the thumbs and we'll bring the moxie" +
         "<span class='brsmall'></span><br/>" + 
         "Jason Quattrone - Music",
-    "links": "[<a href=''>Download APK</a>]", // <em><small>(Badly out of date)</small></em>",
+    "links": "[<a href='./download.php?file=AlphaQuadrant.apk'>Download APK</a>]", // <em><small>(Badly out of date)</small></em>",
     "platformClasses": "platform-android",
   },
 ]
