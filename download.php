@@ -10,6 +10,7 @@ $file_name = basename($_REQUEST['file']);
 $file_path = '/home/scgrn/files/' . $file_name;
 
 $allowed_files = [
+    'Galaxa.gb',
     'Peterman.zip',
     'AlphaQuadrant.apk'
 ];
