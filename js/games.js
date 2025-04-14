@@ -180,12 +180,12 @@ export default [
   {
     "title": "GALAXA",
     "thumbnail": "./img/galaxa/galaxa.jpg",
-    "screenshots": "./img/galaxa/1.png,./img/galaxa/2.png,./img/galaxa/3.png,./img/galaxa/4.png",
+    "screenshots": "./img/galaxa/1.png,./img/galaxa/2.png,./img/galaxa/3.png,./img/galaxa/4.png,./img/galaxa/GB/1.png,./img/galaxa/GB/2.png,./img/galaxa/GB/3.png",
     "platforms": "Android, Nintendo Game Boy",
     "description": "Made for charity game jam, proceeds benefit [<a href='https://www.aspca.org/'>ASPCA</a>]",
     "links": "[<a href='https://play.google.com/store/apps/details?id=net.alienbug.galaxa'>Available on Google Play</a>]<br/>" +
         "<span class='brsmall'></span><br/>" + 
-        "[<a href=''>Download ROM</a>]",
+        "[<a href='./download.php?file=Galaxa.gb'>Download ROM</a>]",
     "platformClasses": "platform-android platform-other",
   },
 
