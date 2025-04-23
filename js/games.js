@@ -188,7 +188,17 @@ export default [
         "[<a href='./download.php?file=Galaxa.gb'>Download ROM</a>]",
     "platformClasses": "platform-android platform-other",
   },
-
+/*
+  {
+    "title": "14th Century Hangout",
+    "thumbnail": "",
+    "screenshots": "",
+    "platforms": "Web",
+    "description": "A macabre take on hangman.<br/>Artwork by Giotto di Bondone (c.1267-1337)<br/>Music composed by Marchetto da Padova (fl.1305-1319)",
+    "links": "",
+    "platformClasses": "platform-web",
+  },
+*/
   {
     "title": "eat!?",
     "thumbnail": "./img/eat/eat.png",
